@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://6t2smoq2wxxc"]
+
+[ext_resource type="Texture2D" uid="uid://b581ayob71ev2" path="res://External/Pixel Adventure/Background/Blue.png" id="1_5b7ti"]
+[ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://External/FlatUI4/kenneyUI-blue.tres" id="2_dvdtt"]
+[ext_resource type="Theme" uid="uid://bnhngmri4tfgr" path="res://External/FlatUI4/kenneyUI-green.tres" id="3_i5qic"]
+[ext_resource type="Theme" uid="uid://h1f7iqhh7ycb" path="res://External/FlatUI4/kenneyUI-yellow.tres" id="4_12kdf"]
+[ext_resource type="Script" uid="uid://k0abe5pjtgh1" path="res://level_select.gd" id="5_xwd2w"]
+[ext_resource type="PackedScene" uid="uid://cry1dvohpathq" path="res://Top-Level Scenes/Test Level.tscn" id="6_wfgb2"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1788395365]
+
+[node name="Background" type="TextureRect" parent="." unique_id=1646240749]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5b7ti")
+stretch_mode = 1
+
+[node name="Main" type="Control" parent="." unique_id=983965413]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Main" unique_id=1745217180]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.662064
+offset_top = -21.125504
+offset_right = 50.662064
+offset_bottom = 21.125504
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_12kdf")
+theme_type_variation = &"FlatButton"
+text = "Play
+"
+
+[node name="Button2" type="Button" parent="Main" unique_id=994557971]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.662064
+offset_top = 46.999985
+offset_right = 50.662064
+offset_bottom = 89.25099
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_12kdf")
+theme_type_variation = &"FlatButton"
+text = "Quit"
+
+[node name="Level Select" type="Control" parent="." unique_id=875743971]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_i5qic")
+
+[node name="Button" type="Button" parent="Level Select" unique_id=1693787444]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.66205
+offset_top = -64.0
+offset_right = 50.66205
+offset_bottom = -21.749023
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_dvdtt")
+theme_type_variation = &"FlatButton"
+text = "Back"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Level Select" unique_id=1254024188]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -368.0
+offset_top = 84.0
+offset_right = 368.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Level Select/ScrollContainer" unique_id=1200393923]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Button" type="Button" parent="Level Select/ScrollContainer/VBoxContainer" unique_id=2134991260]
+layout_mode = 2
+text = "Level 1"
+script = ExtResource("5_xwd2w")
+level = ExtResource("6_wfgb2")
+
+[connection signal="pressed" from="Main/Button" to="Main" method="hide"]
+[connection signal="pressed" from="Main/Button" to="Level Select" method="show"]
+[connection signal="pressed" from="Main/Button2" to="Main" method="hide"]
+[connection signal="pressed" from="Main/Button2" to="Level Select" method="show"]
+[connection signal="pressed" from="Level Select/Button" to="Main" method="show"]
+[connection signal="pressed" from="Level Select/Button" to="Level Select" method="hide"]
+[connection signal="pressed" from="Level Select/ScrollContainer/VBoxContainer/Button" to="Level Select/ScrollContainer/VBoxContainer/Button" method="_on_pressed"]
