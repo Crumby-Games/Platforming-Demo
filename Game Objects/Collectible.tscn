@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://chvwwroov4ndy"]
 
-[ext_resource type="PackedScene" uid="uid://df838dxircwpr" path="res://Interactable.tscn" id="1_io232"]
+[ext_resource type="PackedScene" uid="uid://df838dxircwpr" path="res://Game Objects/Interactable.tscn" id="1_io232"]
 [ext_resource type="Texture2D" uid="uid://c6pxdkjpvglua" path="res://External/Pixel Adventure/Items/Fruits/Pineapple.png" id="1_svjgs"]
-[ext_resource type="Script" uid="uid://i74eh0elj6qc" path="res://Interactable Objects/collectible.gd" id="1_wrr4v"]
+[ext_resource type="Script" uid="uid://i74eh0elj6qc" path="res://Game Objects/collectible.gd" id="1_wrr4v"]
 [ext_resource type="Texture2D" uid="uid://bgho6jikckh2q" path="res://External/Pixel Adventure/Items/Fruits/Collected.png" id="3_d14by"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emxnk"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cd4fn3bd212wy"]
 
-[ext_resource type="PackedScene" uid="uid://df838dxircwpr" path="res://Interactable.tscn" id="1_c1e3h"]
-[ext_resource type="Script" uid="uid://sjscl3rbwmot" path="res://Interactable Objects/flag.gd" id="1_e4pq4"]
+[ext_resource type="PackedScene" uid="uid://df838dxircwpr" path="res://Game Objects/Interactable.tscn" id="1_c1e3h"]
+[ext_resource type="Script" uid="uid://sjscl3rbwmot" path="res://Game Objects/flag.gd" id="1_e4pq4"]
 [ext_resource type="Texture2D" uid="uid://c8sm1j4hrnbfl" path="res://External/Pixel Adventure/Items/Checkpoints/Checkpoint/Checkpoint (No Flag).png" id="1_oftpb"]
 [ext_resource type="Texture2D" uid="uid://bcwg2x82h5c61" path="res://External/Pixel Adventure/Items/Checkpoints/Checkpoint/Checkpoint (Flag Idle)(64x64).png" id="2_vmtkq"]
 [ext_resource type="Texture2D" uid="uid://dxhphy7x6yv7f" path="res://External/Pixel Adventure/Items/Checkpoints/Checkpoint/Checkpoint (Flag Out) (64x64).png" id="2_xhxf4"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cucmsjg8cfd1k"]
 
-[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://player.gd" id="1_dtqjt"]
+[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://Game Objects/player.gd" id="1_dtqjt"]
 [ext_resource type="Texture2D" uid="uid://dhmq57tn3bdge" path="res://External/Pixel Adventure/Main Characters/Ninja Frog/Hit (32x32).png" id="2_5ncpa"]
 [ext_resource type="Texture2D" uid="uid://b2he6v7vh23lo" path="res://External/Pixel Adventure/Main Characters/Ninja Frog/Fall (32x32).png" id="3_wi0c6"]
 [ext_resource type="Texture2D" uid="uid://ch5u8iwivij15" path="res://External/Pixel Adventure/Main Characters/Ninja Frog/Idle (32x32).png" id="4_hp6x6"]
@@ -302,10 +302,8 @@ shape = SubResource("RectangleShape2D_s705m")
 texture_filter = 1
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_5rmqr")
-animation = &"die"
+animation = &"idle"
 autoplay = "idle"
-frame = 6
-frame_progress = 1.0
 
 [node name="RunParticles" type="GPUParticles2D" parent="Visual" unique_id=2002265983]
 texture_filter = 1

@@ -1,12 +1,12 @@
 [gd_scene format=4 uid="uid://cry1dvohpathq"]
 
-[ext_resource type="Script" uid="uid://c7ky5kl087emj" path="res://level.gd" id="1_s4jdi"]
+[ext_resource type="Script" uid="uid://c7ky5kl087emj" path="res://Misc/level.gd" id="1_s4jdi"]
 [ext_resource type="Texture2D" uid="uid://b4e0t7knfhb1a" path="res://External/Pixel Adventure/Background/Green.png" id="2_exw2o"]
 [ext_resource type="Texture2D" uid="uid://448edqn3w6x0" path="res://External/Pixel Adventure/Terrain/Terrain (16x16).png" id="3_g1mm3"]
-[ext_resource type="PackedScene" uid="uid://chvwwroov4ndy" path="res://Interactable Objects/Collectible.tscn" id="4_f0w1g"]
-[ext_resource type="PackedScene" uid="uid://cv2klt4dk8mdb" path="res://Interactable Objects/Spike.tscn" id="4_s4jdi"]
-[ext_resource type="PackedScene" uid="uid://cd4fn3bd212wy" path="res://Interactable Objects/Flag.tscn" id="5_ugfhv"]
-[ext_resource type="PackedScene" uid="uid://cucmsjg8cfd1k" path="res://Player.tscn" id="6_1j7i6"]
+[ext_resource type="PackedScene" uid="uid://chvwwroov4ndy" path="res://Game Objects/Collectible.tscn" id="4_f0w1g"]
+[ext_resource type="PackedScene" uid="uid://cv2klt4dk8mdb" path="res://Game Objects/Spike.tscn" id="4_s4jdi"]
+[ext_resource type="PackedScene" uid="uid://cd4fn3bd212wy" path="res://Game Objects/Flag.tscn" id="5_ugfhv"]
+[ext_resource type="PackedScene" uid="uid://cucmsjg8cfd1k" path="res://Game Objects/Player.tscn" id="6_1j7i6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ki62"]
 texture = ExtResource("3_g1mm3")
@@ -621,19 +621,3 @@ metadata/_edit_use_anchors_ = true
 [node name="Camera" type="Camera2D" parent="." unique_id=1400058871]
 position = Vector2(0, -72)
 zoom = Vector2(2, 2)
-
-[connection signal="body_entered" from="Flag" to="Flag" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203842" to="@Area2D@203842" method="_on_body_entered"]
-[connection signal="body_entered" from="Collectible" to="Collectible" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203843" to="@Area2D@203843" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203844" to="@Area2D@203844" method="_on_body_entered"]
-[connection signal="body_entered" from="Spike" to="Spike" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203845" to="@Area2D@203845" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203846" to="@Area2D@203846" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203847" to="@Area2D@203847" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203848" to="@Area2D@203848" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203849" to="@Area2D@203849" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203850" to="@Area2D@203850" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203851" to="@Area2D@203851" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203852" to="@Area2D@203852" method="_on_body_entered"]
-[connection signal="body_entered" from="@Area2D@203853" to="@Area2D@203853" method="_on_body_entered"]

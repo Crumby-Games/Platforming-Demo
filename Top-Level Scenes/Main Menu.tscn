@@ -4,8 +4,8 @@
 [ext_resource type="Theme" uid="uid://bb6vwl0h1flws" path="res://External/FlatUI4/kenneyUI-blue.tres" id="2_dvdtt"]
 [ext_resource type="Theme" uid="uid://bnhngmri4tfgr" path="res://External/FlatUI4/kenneyUI-green.tres" id="3_i5qic"]
 [ext_resource type="Theme" uid="uid://h1f7iqhh7ycb" path="res://External/FlatUI4/kenneyUI-yellow.tres" id="4_12kdf"]
-[ext_resource type="Script" uid="uid://k0abe5pjtgh1" path="res://level_select.gd" id="5_xwd2w"]
-[ext_resource type="PackedScene" uid="uid://cry1dvohpathq" path="res://Top-Level Scenes/Test Level.tscn" id="6_wfgb2"]
+[ext_resource type="Script" uid="uid://k0abe5pjtgh1" path="res://Misc/level_select.gd" id="5_xwd2w"]
+[ext_resource type="PackedScene" uid="uid://cry1dvohpathq" path="res://Top-Level Scenes/Level 1.tscn" id="6_wfgb2"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1788395365]
 
@@ -18,8 +18,7 @@ grow_vertical = 2
 texture = ExtResource("1_5b7ti")
 stretch_mode = 1
 
-[node name="Main" type="Control" parent="." unique_id=983965413]
-layout_mode = 3
+[node name="Main" type="VBoxContainer" parent="." unique_id=1390847777]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -27,45 +26,17 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
 offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_right = 55.0
+offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="Main" unique_id=1745217180]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.662064
-offset_top = -21.125504
-offset_right = 50.662064
-offset_bottom = 21.125504
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 theme = ExtResource("4_12kdf")
 theme_type_variation = &"FlatButton"
 text = "Play
 "
-
-[node name="Button2" type="Button" parent="Main" unique_id=994557971]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.662064
-offset_top = 46.999985
-offset_right = 50.662064
-offset_bottom = 89.25099
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("4_12kdf")
-theme_type_variation = &"FlatButton"
-text = "Quit"
 
 [node name="Level Select" type="Control" parent="." unique_id=875743971]
 visible = false
@@ -113,7 +84,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 3
 alignment = 1
 
-[node name="Button" type="Button" parent="Level Select/ScrollContainer/VBoxContainer" unique_id=2134991260]
+[node name="LevelSelect" type="Button" parent="Level Select/ScrollContainer/VBoxContainer" unique_id=2134991260]
 layout_mode = 2
 text = "Level 1"
 script = ExtResource("5_xwd2w")
@@ -121,8 +92,6 @@ level = ExtResource("6_wfgb2")
 
 [connection signal="pressed" from="Main/Button" to="Main" method="hide"]
 [connection signal="pressed" from="Main/Button" to="Level Select" method="show"]
-[connection signal="pressed" from="Main/Button2" to="Main" method="hide"]
-[connection signal="pressed" from="Main/Button2" to="Level Select" method="show"]
 [connection signal="pressed" from="Level Select/Button" to="Main" method="show"]
 [connection signal="pressed" from="Level Select/Button" to="Level Select" method="hide"]
-[connection signal="pressed" from="Level Select/ScrollContainer/VBoxContainer/Button" to="Level Select/ScrollContainer/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="Level Select/ScrollContainer/VBoxContainer/LevelSelect" to="Level Select/ScrollContainer/VBoxContainer/LevelSelect" method="_on_pressed"]
