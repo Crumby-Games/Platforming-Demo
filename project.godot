@@ -19,6 +19,17 @@ config/icon="res://icon.svg"
 
 World="*uid://b2n3rawc8b4rd"
 
+[file_customization]
+
+folder_colors={
+"res://External/FlatUI4/": "blue",
+"res://External/Pixel Adventure/": "yellow",
+"res://Game Objects/": "orange",
+"res://Guidance Screenshots/": "gray",
+"res://Misc/": "gray",
+"res://Top-Level Scenes/": "red"
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
