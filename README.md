@@ -15,7 +15,7 @@ The background is similarly boring. See if you can achieve a scroll effect (with
 ## Themes
 Within the External folder, there is a FlatUI4 folder, which contains a few UI themes (.tres files). Double-click on any of these themes within Godot to see a preview of what they look like (the buttons and text changes don’t affect anything). Below is a screenshot of an example preview:
 
-![](Guidance Screenshots/Pasted image 20260625114908.png)
+![](Guidance%20Screenshots/Pasted%20image%2020260625114908.png)
 
 You can drag and drop these files onto the Theme property of any control node (any green node) and it will take on the appropriate visuals. To understand more about themes and how interfaces work in games, have a look at [the docs](https://docs.godotengine.org/en/stable/tutorials/ui/gui_skinning.html).
 ## Expanding the Menu
@@ -45,7 +45,8 @@ Particle effects can be scary to add because there are so many properties to adj
 Before trying to make a new level, try editing the existing level. The file is called "Level 1.tscn" in the FileSystem tab. Double-click it to open the level.
 
 The node tree of the scene will look something like this:
-![](Guidance Screenshots/Pasted image 20260625115647.png)
+
+![](Guidance%20Screenshots/Pasted%20image%2020260625115647.png)
 
 ## Tile Maps and Tile Sets
 The root node, Level, is a TileMapLayer node, which contains all the behaviour needed to draw the level. If you click on the node, it should open a "TileMap" tab on the bottom of the screen, which is where you draw the level from.
@@ -55,13 +56,15 @@ You’ll see it has a TileSet resource as a property, which you can click to ope
 To draw grass, walls, or anything that automatically connects to surrounding tiles, you’ll want to go to the “Terrains” tab of the TileMap and select a terrain. Then you can left-click on the scene to draw and right-click to erase. You’ll see there are two terrain sets (in this TileSet), with different tiling modes (“Matches Corners Only” and “Matches Sides Only”), which determine how it connects tiles. You don’t need to know the details of how this works, unless you want to make your own, in which case, you can learn more from [the docs](https://docs.godotengine.org/en/stable/tutorials/2d/using_tilesets.html#doc-using-tilesets-creating-terrain-sets).
 
 Below is a screenshot of what the menu looks like:
-![](Guidance Screenshots/Pasted image 20260625115906.png)
+
+![](Guidance%20Screenshots/Pasted%20image%2020260625115906.png)
 
 ## Individual Tiles
 In the “Tiles” tab of TileMap, you’ll see there is an item called “Terrain”. This is an atlas, meaning it behaves like a spritesheet, and contains data for many tiles. In this case, the entire atlas is used in terrains, and you can also ignore the autotiling and draw specific tiles from it here, though this usually not needed. You’ll also see there is an item called “Interactables”. This is a Scene Collection, which, just like it sounds, is a bunch of scenes that you can _instantiate_ (i.e., create) by drawing it in the tilemap, instead of dragging it into the scene directly. Scenes are useful because they can contain more behaviour than normal tiles and can have their own scripts. In this case, we have “Collectible” (which is a fruit the player can collect, and it even has a little animation), “Flag” (which is the goals of the player, and it also has animations), and “Spike” (which hurts the player). You can click any of these to draw them in the level.
 
 Below is a screenshot of what this menu looks like:
-![](Guidance Screenshots/Pasted image 20260625120426.png)
+
+![](Guidance%20Screenshots/Pasted%20image%2020260625120426.png)
 
 ## Background
 Background is a CanvasLayer node, which is a special type of node that is completely unaffected by changes in the camera or the position of its parent. We use this behaviour to make a solid colour background, which you can change by changing the texture of the TextureRect (there’s a bunch of example textures in External/Pixel Adventure/Backgrounds). If you’re interested, you could try your hand at making the background scroll slowly using an AnimationPlayer. (hint: you’ll want to increase the size of the TextureRect).
